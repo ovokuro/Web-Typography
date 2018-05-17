@@ -1,0 +1,32 @@
+// generate offset value from cap-height and line height
+// values for body and copy
+
+
+$offset-b: round(($line-height - $capHeight-b * $font-size) / 2)
+$offset-t1: round(($line-height - $capHeight-t * $scale-up-1) / 2)
+$offset-t2: round(($line-height - $capHeight-t * $scale-up-2) / 2)
+$offset-t3: round(($line-height - $capHeight-t * $scale-up-3) / 2)
+$offset-t4: round(($line-height - $capHeight-t * $scale-up-4) / 2)
+
+
+
+
+.offset-b
+  margin-top: $offset-b
+  margin-bottom: -1 * $offset-b
+  
+.offset-t1
+  margin-top: $offset-t1
+  margin-bottom: -1 * $offset-t1
+  
+.offset-t2
+  margin-top: $offset-t2
+  margin-bottom: -1 * $offset-t2
+  
+.offset-t3
+  margin-top: $offset-t3
+  margin-bottom: -1 * $offset-t3
+
+.offset-t4
+  margin-top: $offset-t4
+  margin-bottom: -1 * $offset-t4

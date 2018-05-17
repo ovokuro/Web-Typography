@@ -1,0 +1,54 @@
+// How to use the typography variables in SASS
+
+1.  CHOOSE A TYPEFACE 
+    
+    Each typeface has different requirements for legibility.
+    Example: line-height, line-lengths, color (e.g. dark-mode), usage etc
+    
+    
+2.  CHOOSE AN APPROPRIATE LINE SPACING VALUE
+  
+    As a guide, about (1.5 * font-size)
+    This is trial and error, shorter line-lengths typically require a smaller value
+    Line spacing is affected by background color (dark background - increase spacing)
+    
+    
+3.  GET THE CAP HEIGHT 
+
+    Easiest method I've found is to
+    1. Open up Illustrator
+    2. Type the letter 'H'
+    3. Pick the font you'll be using
+    4. Set the font-size to 100px
+    5. Using the ruler or line tool, measure the height of the H
+    6. That height is a percentage value
+    7. If the value is 75 - set the cap-height to 0.75
+
+
+4.  ALIGN TEXT TO THE BASELINE
+
+    Set up a vertical grid on HTML and make sure it corresponds to line-spacing
+    Text needs to be offset to line up with the baseline.
+    To get the offset value:
+        ((line-height - cap-height) * font-size) / 2
+        We multiply by the font size to ensure a pixel value
+    
+    For an element, set margin-top = $offset and margin-bottom = -1 * $offset
+    
+    
+5.  CREATE A UTILITY CLASS FOR BACKGROUND
+
+    Parents with background will appear to overflow container
+    because of child negative margin
+    Use padding: .1px 0 (hack)
+    
+
+6.  CREATE SIZING CLASSES
+
+    create a set of sizing classes for padding based off line-height to space elements
+    
+
+
+Finally...
+    Round everything
+    

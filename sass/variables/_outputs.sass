@@ -1,0 +1,35 @@
+body
+  font-size: $font-size
+  font-family: map-get($fonts, body)
+  
+h1, h2, h3, h4, h5, h6
+  font-family: map-get($fonts, heading)
+p
+  font-size: inherit
+
+%line-height-title
+  line-height: $line-height
+
+.t-up-1
+  font-size: $scale-up-1
+  
+.t-up-2
+  font-size: $scale-up-2
+  @extend %line-height-title
+  
+.t-up-3
+  font-size: $scale-up-3
+  @extend %line-height-title
+  
+.t-up-4
+  font-size: $scale-up-4
+  @extend %line-height-title
+  font-weight: bold
+  text-transform: uppercase
+
+.pb-1
+  padding-bottom: $line-height
+  
+.pb-2
+  padding-bottom: $line-height * 2
+  
